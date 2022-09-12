@@ -47,8 +47,6 @@ function App() {
     contact.name.toLowerCase().includes(normalizedFilter)
   );
 
-  console.log(visibleContacts);
-
   return (
     <Container>
       <h1 className={s.mainHeader}>Phonebook</h1>
