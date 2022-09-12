@@ -7,7 +7,7 @@ const ContactList = ({ data, onClick }) => {
     onClick(id);
   };
 
-  return data.arr.map(({ id, name, number }) => (
+  return data.map(({ id, name, number }) => (
     <li key={id} className={s.listItem}>
       <p className={s.pEl}>{name}</p>:{' '}
       <span className={s.spanEl}>{number}</span>

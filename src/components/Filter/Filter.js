@@ -17,3 +17,8 @@ export const Filter = ({ value, onChange }) => {
     </div>
   );
 };
+
+Filter.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
