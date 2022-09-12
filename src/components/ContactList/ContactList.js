@@ -1,27 +1,26 @@
-import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 import s from './ContactList.module.css';
 
-export class ContactList extends Component {
-  removeContact = id => {
-    this.props.onClick(id);
+const ContactList = ({ data, onClick }) => {
+  const removeContact = id => {
+    onClick(id);
   };
 
-  render() {
-    const arr = this.props.data;
-    return arr.map(({ id, name, number }) => (
-      <li key={id} className={s.listItem}>
-        <p className={s.pEl}>{name}</p>:{' '}
-        <span className={s.spanEl}>{number}</span>
-        <button
-          className={s.btn}
-          type="button"
-          onClick={() => this.removeContact(id)}
-        >
-          Delete
-        </button>
-      </li>
-    ));
-  }
-}
+  return data.arr.map(({ id, name, number }) => (
+    <li key={id} className={s.listItem}>
+      <p className={s.pEl}>{name}</p>:{' '}
+      <span className={s.spanEl}>{number}</span>
+      <button className={s.btn} type="button" onClick={() => removeContact(id)}>
+        Delete
+      </button>
+    </li>
+  ));
+};
+
+ContactList.propTypes = {
+  data: PropTypes.array.isRequired,
+  onClick: PropTypes.func.isRequired,
+};
 
 export default ContactList;
