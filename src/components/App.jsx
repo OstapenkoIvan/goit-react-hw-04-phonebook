@@ -1,6 +1,8 @@
 import { nanoid } from 'nanoid';
 import React, { useState, useEffect } from 'react';
 import { Filter } from './Filter/Filter';
+
+// import {save, load, nanoid, Filter} from './reexport'
 import s from './App.module.css';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
