@@ -1,11 +1,11 @@
-import { nanoid } from 'nanoid';
+import { nanoid, save, load, Filter } from './reExport';
+
 import React, { useState, useEffect } from 'react';
-import { Filter } from './Filter/Filter';
+
 import s from './App.module.css';
 import ContactForm from './ContactForm/ContactForm';
 import ContactList from './ContactList/ContactList';
 import Container from './Container/Container';
-import { save, load } from './localstorage';
 
 function App() {
   const [contacts, setContacts] = useState([]);
