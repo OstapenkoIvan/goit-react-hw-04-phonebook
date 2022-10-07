@@ -1,4 +1,4 @@
-import { nanoid, save, load, Filter } from './reExport';
+import { nanoid, save, load, Filter } from './reexport';
 
 import React, { useState, useEffect } from 'react';
 
